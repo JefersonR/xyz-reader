@@ -1,75 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_below="@+id/img_offer"
-    android:orientation="vertical">
+    android:background="@android:color/white"
+    android:fillViewport="true">
 
     <LinearLayout
-        android:id="@+id/meta_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="@dimen/detail_metabar_vert_padding"
-        android:background="#333"
-        android:orientation="vertical"
-        android:paddingBottom="@dimen/detail_metabar_vert_padding"
-        android:paddingLeft="@dimen/detail_inner_horiz_margin"
-        android:paddingRight="@dimen/detail_inner_horiz_margin"
-        android:paddingTop="@dimen/detail_metabar_vert_padding">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/article_title"
-            style="?android:attr/textAppearanceLarge"
+        <LinearLayout
+            android:id="@+id/meta_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed"
-            android:lineSpacingMultiplier="0.9"
-            android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
-            android:textColor="#fff"
-            android:textSize="@dimen/detail_title_text_size"
-            android:textStyle="bold" />
+            android:layout_gravity="bottom"
+            android:background="@color/black_light"
+            android:orientation="vertical"
+            android:padding="@dimen/detail_metabar_vert_padding">
+
+            <TextView
+                android:id="@+id/article_title"
+                style="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:lineSpacingMultiplier="0.9"
+                android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/detail_title_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/article_byline"
+                style="?android:attr/textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_light" />
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/article_byline"
-            style="?android:attr/textAppearanceSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#8fff" />
+            android:id="@+id/article_body"
+            style="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/default_margin"
+            android:textColor="@color/ltgray"
+            android:textColorLink="@color/colorAccent"
+            android:textSize="@dimen/detail_body_text_size" />
+
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/article_body"
-        style="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/meta_bar"
-        android:layout_marginLeft="@dimen/detail_inner_horiz_margin"
-        android:layout_marginRight="@dimen/detail_inner_horiz_margin"
-        android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier"
-        android:paddingBottom="@dimen/detail_body_bottom_margin"
-        android:textColor="@color/ltgray"
-        android:textColorLink="@color/colorAccent"
-        android:textSize="@dimen/detail_body_text_size" />
-
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/share_fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:src="@drawable/ic_share"
-        android:tint="@android:color/white"
-        app:backgroundTint="@color/colorPrimary"
-        app:layout_anchor="@id/appbar"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        app:layout_anchorGravity="bottom|right|end" />
-
-
-</RelativeLayout>
-
-
-
-
+</android.support.v4.widget.NestedScrollView>
