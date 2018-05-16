@@ -8,5 +8,9 @@
     <string name="action_share">Share</string>
 
     <string name="up">Up</string>
+    <string name="str_text_plain">text/plain</string>
+    <string name="rosario_regular_font">Rosario-Regular.ttf</string>
+    <string name="str_share_text">XYZRedear is Awesome</string>
+    <string name="str_share_complete">I\'m reading %s in XYZ Reader #XYZ</string>
 
 </resources>
